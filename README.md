@@ -42,5 +42,8 @@
     - 빅데이터 활용
 
 ## 관련 기술
+- HTML + CSS
+- JavaScript
+- JAVA
 - Spring
 - MySQL
