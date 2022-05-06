@@ -5,10 +5,10 @@
 - IT 전공 대학생을 위한 질의응답 커뮤니티 웹
 
 ## 팀원
-- [SERIM](www.github.com/Jserim420) : 백엔드, 데이터베이스
-- [DAYOUNG](www.github.com/YDA0) : 백엔드
-- [HYOJIN](www.github.com/hyojin0308) : 프론트엔드, UI/UX
-- [BOMI](www.github.com/Kbomi16) : 프론트엔드, UI/UX
+- [SERIM](https://github.com/Jserim420) : 백엔드, 데이터베이스
+- [DAYOUNG](https://github.com/YDA0) : 백엔드
+- [HYOJIN](https://github.com/hyojin0308) : 프론트엔드, UI/UX
+- [BOMI](https://github.com/Kbomi16) : 프론트엔드, UI/UX
 
 ## 프로젝트 목적(필요성)
 - 프로젝트 선정 이유
