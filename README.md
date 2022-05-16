@@ -69,7 +69,7 @@
     속성 분류 | 속성 | 설명 | 자료형, 특징
     --------|------|-----|----|
     PK 속성 | # commentID | 댓글 고유 번호 | VARCHAR(11) 
-    파생 속성(FK) | # postID | 게시글 고유 번호(FK_게시글_게시글 고유번호) | VARCHAR(11)
-    파생 속성(FK) | # userID | 댓글 작성자 (FK_회원_회원아이디) | INT
-    일반 속성 | # writeDate | 작성날짜 | DATE
-    일반 속성 | # goodNo | 좋아요 개수 | INT
+    파생 속성(FK) | * postID | 게시글 고유 번호(FK_게시글_게시글 고유번호) | VARCHAR(11)
+    파생 속성(FK) | * userID | 댓글 작성자 (FK_회원_회원아이디) | INT
+    일반 속성 | * writeDate | 작성날짜 | DATE
+    일반 속성 |ㆍgoodNo | 좋아요 개수 | INT
