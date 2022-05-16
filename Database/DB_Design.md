@@ -25,6 +25,7 @@
     일반 속성 | * managerName | 관리자 이름 | VARCHAR(15)
     일반 속성 | * managerRegistNo | 관리자 주민번호 | CHAR(13), unique
     일반 속성 | * managerPhoneNo | 관리자 전화번호 | CHAR(9), unique
+    > 생성 예정이었으나 불필요하고 판단되어 삭제함
 
     <br>
 
@@ -46,7 +47,7 @@
     파생 속성(FK) | * postCode | 게시글 종류코드(FK_게시글종류_게시글종류ID) | CHAR(2)
     일반 속성 | * postNumber | 게시글 번호 | INT
     일반 속성 | * postTitle | 게시글 제목 | VARCHAR(20)
-    파생 속성(FK) | * userID | 작성자 (FK_회원_회원아이디) | INT
+    파생 속성(FK) | * userID | 작성자 (FK_회원_회원아이디) | VARCHAR(20)
     일반 속성 | * writeDate | 날짜 | DATE
     일반 속성 |ㆍNumberView | 조회수 | INT 
 
@@ -74,4 +75,4 @@
 <BR>
 
 2. 데이터베이스 E-R Diagram
-![ERDIA](https://user-images.githubusercontent.com/81462623/168567718-b8c3347c-1f2f-4dba-9ec8-3fba115ac89e.png)
+![ERDIA_2](https://user-images.githubusercontent.com/81462623/168590321-f73055e6-2889-45b1-b5dc-4feaf1cf0158.png)
