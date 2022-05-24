@@ -289,16 +289,47 @@ padding-bottom: 100px;
 }
 
 #liSearchOption {
-  width: 1250px;
   clear:both;
 }
 #liSearchOption > div {
 margin:0 auto; 
 margin-top: 30px; 
 height:100px;
-
+width: auto;
 }
 
 .left {
 text-align : left;
 }
+#selSearchOption {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgb(220, 204, 228);
+  }
+  
+  #txtKeyWord {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid rgb(220, 204, 228);
+  }
+  
+  #btn_search {
+  background-color: rgb(220, 204, 228);
+  color: black;
+  border-radius: 10px;
+  width: 80px;
+  height: 35px;
+  border-width: 0ch;
+  }
+  .btn_question {
+    background-color: rgba(185, 157, 206, 0.6);
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    border-width: 0ch;
+    margin-top: 30px;
+    margin-left: 100px;
+    }
