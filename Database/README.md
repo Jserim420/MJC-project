@@ -76,4 +76,15 @@
 <BR>
 
 2. 데이터베이스 E-R Diagram
-![ERDIA_3](https://user-images.githubusercontent.com/81462623/168704228-81c8251c-adb4-4794-87fe-06a807dae188.png)
+ - 1차
+
+    ![ERDIA_3](https://user-images.githubusercontent.com/81462623/168704228-81c8251c-adb4-4794-87fe-06a807dae188.png)
+ - 2차
+    - 사용자 ROLE 테이블을 삭제하고 가입한 사용자에게 직접 ROLE을 부여(default ‘user’)
+    - 사용자 테이블의 전화번호(PhoneNo) 삭제
+    - 사용자, 게시글, 댓글에 고유 코드를 INT로 부여
+        - 가변형 값 varchar로 인한 공간 확보 문제를 해결하기 위해 PK는 주로 INT를 사용
+    - 게시글의 종류 POSTKIND 테이블을 삭제하고 게시글에 직접 POSTKIND를 부여
+    - 날짜형 변수 모두 DATETIME으로 변환
+
+    ![ERDIA_4](https://user-images.githubusercontent.com/81462623/170963620-1e8beb1f-6b37-40da-9cbc-79b5f98878b8.png)

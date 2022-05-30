@@ -1,12 +1,14 @@
 CREATE TABLE TB_USER
 (
+    userCode INT unique not null auto_increment,
 	userID VARCHAR(20) unique not null,
     userName VARCHAR(15) not null,
     userPassword VARCHAR(20) not null,
     userNickName VARCHAR(15) unique not null,
-    userPhoneNo CHAR(9) unique not null,
+    /* userPhoneNo CHAR(9) unique not null, */
     userSchool VARCHAR(15) unique not null,
-    userDate Date,
+    role VARCHAR(15) not null default "USER",
+    userDate DateTime,
     userWrite INT,
     userAdopt INT,
     primary key(userID)
@@ -25,27 +27,29 @@ CREATE TABLE TB_MANAGER
 drop table TB_MANAGER;
 */
 
+/*
 CREATE TABLE TB_POSTKIND 
 (
 	postCode CHAR(2) unique not null,
     postName VARCHAR(10) unique,
     primary key(postCode)
 );
+drop table TB_POSTKIND
+*/
 
 CREATE TABLE TB_POST
 (
-	postID VARCHAR(11) unique not null, 
+	postID INT unique not null auto_increment, 
     categoryID CHAR(3) not null,
-    postCode CHAR(2) not null,
+    postKind VARCHAR(20) not null,
     postNumber INT not null,
     postTitle VARCHAR(20) not null,
-    userID VARCHAR(20),
-    writeDate DATE,
+    userCode INT,
+    writeDate DATETIME,
     NumberView INT,
     primary key(postID),
-    foreign key(postCode) references TB_POSTKIND(postCode),
     foreign key(categoryID) references TB_CATEGORY(categoryID),
-    foreign key(userID) references TB_USER(userID)
+    foreign key(userCode) references TB_USER(userCode)
 );
 
 
@@ -58,13 +62,13 @@ CREATE TABLE TB_CATEGORY
 
 CREATE TABLE TB_COMMNET
 (
-	commentID VARCHAR(11) unique not null,
-    postID VARCHAR(11) not null,
-    userID VARCHAR(11) not null,
-    writeDate date,
+	commentID INT unique not null auto_increment,
+    postID INT not null,
+    userID INT not null,
+    writeDate DATETIME,
     goodNo INT,
     primary key(commentID),
     foreign key(postID) references TB_POST(postID),
-    foreign key(userID) references TB_USER(userID)
+    foreign key(userCode) references TB_USER(userCode)
 )
 
