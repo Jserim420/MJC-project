@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME_Q&A View other</title>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+        <link rel="stylesheet" href="h_maincss.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.outer-menu-item').hover(function () {
+                    $(this).find('.inner-menu').show();
+                }, function () {
+                    $(this).find('.inner-menu').hide();
+                });
+            });
+        </script>
+    </head>
+    <header id="main-header">
+        <img src="iTEALER-001.png" width="250", height="250" display: inline-block>
+        <div class ="search-box">
+            <input type="text" class="search-txt" name=""placeholder="검색">
+            <a class ="search-btn" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+        </div>
+    </header>
+    <body>
+        <nav id="main-navigation">
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <li class="outer-menu-item">
+                        <span class="menu-title">⬛ 카테고리</span>
+                        <ul class="inner-menu">
+                            <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">JAVA</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">JavaScript</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">PHP</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">C++ / C#</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">Python</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Kotlin</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">SQL</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">R</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Swift</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="레시피보기.html">VisualBasic</a></li>
+                            <li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">기타</a></li>
+                        </ul>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">공지사항</span>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">학습가이드</span>
+                    </li>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">스터디</span>
+                        <li class="outer-menu-item">
+                            <span class="menu-title"><a href="profile 전체.html">마이페이지</a></span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <style>
+              {
+             margin-left: 300px;
+             margin-right: 300px;
+            width: 1250px;
+            align-items: center
+             }
+               #main-navigation {
+                   border-top: 1px solid #C8C8C8;
+                   border-bottom: 1px solid #C8C8C8;
+                   margin-bottom: 20px;
+                   height: 70px;
+                   list-style: none;
+               }
+               
+               .outer-menu-item {
+                   float: left;
+                   position: relative;
+                   list-style: none;
+               }
+               .outer-menu-item:hover {
+                   background: rgb(255, 255, 255);
+                   color: rgb(185, 157, 206);
+                   list-style: none;
+               }
+               
+               .menu-title {
+                   display: block;
+                   height: 30px; line-height: 30px;
+                   text-align: center;
+                   padding: 5px 20px;
+               }
+               
+               .inner-menu {
+                   display: none;
+                   position: absolute;
+                   top: 40px; left: 0;
+                   width: 100%;
+               
+                   background: white;
+                   box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+                   z-index: 1000;
+               
+                   text-align: center
+               }
+               
+               .inner-menu-item > a {
+                   display: block;
+                   padding: 5px 10px;
+                   color: black
+               }
+               
+               .inner-menu-item > a:hover {
+                   background:  rgb(185, 157, 206);
+                   color: white;
+               }
+               
+               
+               .search-box{
+                   padding: 10px;
+                   height: 30px;
+                   margin-top: 100px;
+                   background-color: #fff;
+                   border: 1px solid rgb(185, 157, 206);
+                   border-radius: 30px;
+                   transition: 0.4s;
+                   width:500px;
+                   float: right;
+                   position: relative;
+                 }
+                 
+                 .search-btn{
+                   text-decoration: none;
+                   float: right;
+                   width: 30px;
+                   height: 30px;
+                   background-color: #fff;
+                   border-radius: 50%;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   color: rgb(185, 157, 206);
+                   position: absolute;
+                   right: 11px;
+                   top: 11px;
+                 }
+                 .search-box:hover > .search-btn{
+                   background-color: #fff;
+                 }
+                 .search-txt{
+                   padding: 0;
+                   width: 0px;
+                   border:none !important;
+                   background: none;
+                   outline: none;
+                   float: left;
+                   font-size: 1rem;
+                   line-height: 30px;
+                   margin: 0 !important;
+                   height: 38px;
+                   background-color: white !important;
+                 }
+                 .search-txt{
+                   width: 240px;
+                   padding: 0 6px;
+                 }
+        
+                 .category {
+                     background-color: rgb(221, 211, 229);
+                     text-align: center;
+                     padding-top: 1px;
+                     padding-bottom: 1px;
+                     font-size: 16px;
+                     border-radius: 10px;
+                 }
+        
+                 .bold {
+                     font-weight: 900;
+                 }
+        
+                 .question_box {
+                    margin-top: 40px;
+                    margin-bottom: 100px;
+                    border: 1px solid rgb(237,237,239);
+                    padding-left: 100px;
+                    padding-right: 100px;
+                    padding-bottom: 100px;
+                    box-shadow: 4px 4px rgba(237,237,239);
+                    border-radius: 10px;
+                 }
+        
+                 .question_box p{
+                    font-size: 16px;
+                    padding-top: 10px;
+                 }
+        
+                 .question {
+                     border: 0px solid black;
+                     margin-left: 20px;
+                     background-color: rgba(237,237,239);
+                     padding-left: 12px;
+                     padding-right: 400px;
+                     padding-top: 7px;
+                     padding-bottom: 7px;
+                     border-radius: 40px;
+                 }
+        
+                 .question_img {
+                     margin-top: 100px;
+                     width: 700px;
+                     height: auto;
+                 }
+        
+                 .entire_answer {
+                     display: flex;
+                     justify-content: space-between;
+                     margin-bottom: 40px;
+                 }
+        
+                 .answer {
+                     display: flex;
+                     padding-top: 10px;
+                     padding-left: 10px;
+                     padding-right: 30px;
+                     border: 1px solid rgb(221, 220, 220);
+                     box-shadow: 4px 4px rgb(237,237,239);
+                     border-radius: 10px;
+                 }
+        
+                 .answer_icon {
+                     width: 50px;
+                 }
+        
+                 .icon_box {
+                    text-align: center;
+                 }
+        
+                 .answer_description {
+                    padding-left: 30px;
+                 }
+        
+                 .answer_info {
+                     padding-top: 21px;
+                     color: gray;
+                     font-size: 13px;
+                 }
+        
+                 .rating {
+                     padding-left: 495px;
+                     font-size: 25px;
+                     font-weight: 600;
+                     width: 50px;
+                     text-align: center;
+                 }
+        
+                 .sub_answer {
+                     padding-left: 10px;
+                     padding-top: 6px;
+                     padding-bottom: 6px;
+                     border-radius: 10px;
+                     border: 1px solid rgb(221, 220, 220);
+                     box-shadow: 2px 2px rgb(237,237,239);
+                     display: flex;
+                     justify-content: space-between;
+                     margin-bottom: 10px;
+                 }
+        
+                 .flex {
+                     display: flex;
+                 }
+        
+                 .flex p {
+                    padding-left: 10px;
+                    color: gray;
+                    font-size: 15px;
+                 }
+        
+                 .submit_btn {
+                    width: 70px;
+                    background-color: rgba(185, 157, 206, 0.6);
+                    text-align: center;
+                    margin-top: -6px;
+                    margin-bottom: -6px;
+                    padding-top : 22px;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px rgb(208, 206, 206);
+                 }
+        
+                 #no {
+                     padding-top: 15px;
+                     padding-bottom: 15px;
+                 }
+                 
+                 .go_right {
+                     margin-left: 100px;
+                     margin-bottom: 80px;
+                 }
+        
+                 .sub_btn {
+                    background-color: rgba(185, 157, 206, 0.6);
+                    margin-right: 10px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    border-radius: 10px;
+                 }
+
+                 section {
+            padding-bottom: 200px;
+            }
+
+             footer {
+                width: 1250px;
+                position: absolute;
+                border-top-style: solid;
+                border-bottom-style: solid;
+                border-color: rgb(220, 204, 228);
+                margin-bottom: 100px;
+                }
+
+                .f1 {
+  float: left;
+  margin-left: 40px;
+  margin-right: 100px;
+  text-align: center;
+  padding-left: 200px;
+  padding-top: 50px;
+}
+.f2{
+  float: left;
+  margin-left: 100px;
+  padding-top: 30px;
+}
+.f3 {
+  margin-top: 150px;
+  background-color: rgb(247, 234, 138);
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 230px;
+}
+.ff4 {
+  float: left;
+  margin-left: 230px;
+  margin-bottom: 50px;
+}
+.ff5 {
+  float: left;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+#fimg {
+  margin-left: 230px;
+}
+            </style>
+
+<div class="category">
+    <p>JAVAㅤ|ㅤJavaScriptㅤ|ㅤPHPㅤ|ㅤC++ / C#ㅤ|ㅤ<span class="bold">Python</span>ㅤ|ㅤKotlinㅤ|ㅤSQLㅤ|ㅤRㅤ|ㅤSwiftㅤ|ㅤVisualBasicㅤ|ㅤ기타</p>
+</div>
+<div class="question_box">
+    <p>제목 <span class="question">파이썬 한 줄 오류 뜨는데 뭐가 문젠지 모르겠습니다,,,,,, 도와주세요.....!!!!</span></p>
+    <img src="error.png" alt="question" class="question_img">
+</div>
+<div class="entire_answer">
+    <div class="answer">
+        <div class="icon_box">
+            <img src="icon.png" class="answer_icon">
+            <p>그그</p>
+        </div>
+        <div class="answer_description">
+            <p>오잉,,,,?</p>
+            <p class="answer_info">2022.05.05 16:31</p>
+        </div>
+        <div class="rating" style="padding-left: 960px;">
+            △<br />
+            -21<br />
+            ▽
+        </div>
+    </div>
+
+</div>
+<div class="entire_answer">
+    <div class="answer">
+        <div class="icon_box">
+            <img src="icon.png" class="answer_icon">
+            <p>묭</p>
+        </div>
+        <div class="answer_description">
+            <p>빨간줄 파파고에 번역해봐영</p>
+            <p class="answer_info">2022.05.05 16:31</p>
+        </div>
+        <div class="rating" style="padding-left: 855px;">
+            △<br />
+            -4<br />
+            ▽
+        </div>
+    </div>
+</div>
+<div class="entire_answer">
+    <div class="answer">
+        <div class="icon_box">
+            <img src="icon_special.png" class="answer_icon" style="width: 80px;">
+            <p style="margin-top: -15px;">보리</p>
+        </div>
+        <div class="answer_description">
+            <p>int에 abc가 없다고 뜨네요,,? 예외처리를 해야할 것 같네요~</p>
+            <p class="answer_info">2022.05.05 16:31</p>
+        </div>
+        <div class="rating" style="padding-left: 598px;">
+            △<br />
+            84<br />
+            ▽
+        </div>
+    </div>
+</div>
+
+<div class="sub_answer">
+    <div class="flex">
+        <img src="icon.png" class="answer_icon"> 
+        <p>댓글을 작성하여 문제해결에 도움을 주세요. </p>
+    </div>
+    <div class="submit_btn">
+        작성
+    </div>
+
+
+</div>
+<section></section>
+    <footer>
+        <div class="f">
+            <div class="f1">
+                <h2>공지사항</h2>
+            </div>
+            <div class="f2">
+                <h4>[BEST iTEALER] 채택률 이벤트 당첨 안내</h4>
+                <h4>[공지] 카카오톡을 사칭하는 계정을 주의하시기 바랍니다.</h4>
+            </div>
+        </div>
+        <div class="f3">
+            <h4>회사소개  |  채용안내  |  이용약관  |  개인정보처리방침</h4>
+        </div>
+        <a href="main.html"><img id=fimg src="iTEALER-001.png" width="150", height="150" display: inline-block> </a>
+        <div class="f4">
+            
+            <div class="ff4">
+            <p>
+                (주) iTEALER COMPANY<br/>
+                대표이사 : 정통이<br/>
+                개인정보책임관리자 : 이정통<br/>
+                사업자번호 : 540-6587-520<br/>
+                사무실 : 서울특별시 서대문구            
+            </p>
+            </div>
+            <div class="ff5">
+                <p>
+                    고객지원 : 02-501-9332<br/>
+                    결제/환불/계산서 문의 : help@itealer.co.kr<br/>
+                    기타문의 : help.online@itealer.co.kr <br/><br/>
+                    주중 10시~19시 (점심시간 12-13시 / 주말 및 공휴일 제외)<br/>
+                    통신판매업 신고번호 : 제 2022-서울서대문-20호
+                </p>
+            </div>
+        </div>
+        </footer>
+
+</body>
