@@ -1,0 +1,131 @@
+html { <style type="text/css">
+    line-height:2em;
+    margin-left: 300px;
+    margin-right: 300px;        
+}
+
+ul, li{ 
+    list-style:none;
+    text-align:center;
+    padding: 0;
+}
+
+#mainWrapper{
+    width: 1250px;
+}
+
+#mainWrapper > ul > li:first-child {
+    text-align: center;
+    font-size:14pt;
+    height:40px;
+    vertical-align:middle;
+    line-height:30px;
+}
+
+#ulTable {margin-top:10px;}
+
+
+#ulTable > li:first-child > ul > li {
+    background-color: rgba(185, 157, 206, 0.6);
+    font-weight:bold;
+    text-align:center;
+}
+
+#ulTable > li > ul {
+    clear:both;
+    padding:0px auto;
+    position:relative;
+}
+#ulTable > li > ul > li { 
+    float:left;
+    font-size:11pt;
+    border-bottom:2px solid rgb(220, 204, 228);
+    vertical-align:baseline;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}    
+
+#ulTable > li > ul > li:first-child      {width: 10%;}          /*No 열 크기*/
+#ulTable > li > ul > li:first-child +li    {width: 45%;}       \ /*제목 열 크기*/
+#ulTable > li > ul > li:first-child +li+li  {width: 20%;}      /*작성일 열 크기*/
+#ulTable > li > ul > li:first-child +li+li+li {width: 15%;}     /*작성자 열 크기*/
+#ulTable > li > ul > li:first-child +li+li+li+li  {width: 10%;} /*조회수 열 크기*/
+
+#divPaging {
+clear: both;
+margin: auto;
+width: 400px;
+height: 60px;
+padding-top: 30px;
+padding-bottom: 30px;
+margin-left: 180px;
+margin-right: 40px;
+display: inline-flex;
+}
+
+.btn_question {
+background-color: rgba(185, 157, 206, 0.6);
+border-radius: 10px;
+width: 150px;
+}
+
+#divPaging > div {
+    float:left;
+    width: 30px;
+    margin:0 auto;
+    text-align:center;
+    
+}
+
+#liSearchOption {clear:both;}
+#liSearchOption > div {
+    margin:0 auto; 
+    margin-top: 80px; 
+    margin-bottom: -50px;
+    width:auto; 
+    height:100px;
+}
+
+.left {
+    text-align : left;
+}
+
+button{
+width:100px;
+height: 40px;
+color:rgb(0, 0, 0);
+background: rgba(185, 157, 206, 0.6)
+font-size: 13px;
+border:none;
+border-radius: 15px;
+left:85%;
+top:79%;
+}
+
+#selSearchOption {
+width: 70px;
+height: 32px;
+text-align: center;
+border-radius: 10px;
+border: 1px solid rgb(220, 204, 228);
+}
+
+#txtKeyWord {
+width: 300px;
+height: 30px;
+border-radius: 10px;
+border: 1px solid rgb(220, 204, 228);
+}
+
+#btn_search {
+background-color: rgb(220, 204, 228);
+color: black;
+border-radius: 10px;
+width: 80px;
+height: 35px;
+}
+
+section {
+    padding-bottom: 200px;
+    }
