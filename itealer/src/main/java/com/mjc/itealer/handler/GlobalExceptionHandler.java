@@ -1,9 +1,9 @@
-package com.cos.itealer.handler;
+package com.mjc.itealer.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import com.cos.itealer.dto.ResponseDto;
+import com.mjc.itealer.dto.ResponseDto;
 
 @ControllerAdvice
 @RestController

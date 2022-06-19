@@ -1,4 +1,4 @@
-package com.cos.itealer.model;
+package com.mjc.itealer.model;
 
 public enum RoleType {
 	USER, ADMIN

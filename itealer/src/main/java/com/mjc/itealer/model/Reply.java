@@ -1,4 +1,4 @@
-package com.cos.itealer.model;
+package com.mjc.itealer.model;
 
 import java.sql.Timestamp;
 
@@ -32,4 +32,7 @@ public class Reply {
 	
 	@CreationTimestamp
 	private Timestamp createDate;
+	
+	@JoinColumn(name = "goodNumber")
+	private int goodNo;
 }

@@ -1,13 +1,13 @@
-package com.cos.itealer;
+package com.mjc.itealer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BlogApplication {
+public class ItealerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BlogApplication.class, args);
+		SpringApplication.run(ItealerApplication.class, args);
 	}
 
 }

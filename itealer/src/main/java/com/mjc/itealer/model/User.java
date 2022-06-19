@@ -1,13 +1,10 @@
-package com.cos.itealer.model;
+package com.mjc.itealer.model;
 
 import java.sql.Timestamp;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.DynamicInsert;
-
 import lombok.*;
 
 @Data // Getter와 Setter 자동생성
@@ -23,20 +20,30 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // 프로젝트에서 연결된 DB의 넘버링 전략
 	private int id; // 시퀀스, auto_increment
 	
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false, length = 30, unique=true)
 	private String username; // 아이디
 	
-	@Column(nullable = false, length = 100) // 비밀번호를 암호화(해쉬)
+	@Column(nullable = false, length = 30)
+	private String realname; // 이름
+	
+	@Column(nullable = false, length = 100) 
 	private String password;
 	
 	@Column(nullable = false, length = 50) 
-	private String email;
+	private String nickname;
 	
-	// @ColumnDefault("'user'")
-	// 해당 ENUM이 String이라는것을 알려줌
+	@Column(nullable = false, length = 50) 
+	private String schoolInfo;
+	
+	@Column(nullable = true) 
+	private int wirteCount;
+	
+	@Column(nullable = true) 
+	private int adoptCount;
+	
 	@Enumerated(EnumType.STRING)
-	private RoleType role; // Enum을 쓰는게 좋다. (데이터의 도메인-범위 생성 가능) , 타입강제 - ADMIN, USER
+	private RoleType role;
 	
 	@CreationTimestamp // 시간 자동 입력
-	private Timestamp createDate; // 회원정보 수정 : updateDate
+	private Timestamp createDate;
 }

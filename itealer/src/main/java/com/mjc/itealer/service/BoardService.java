@@ -1,15 +1,15 @@
-package com.cos.itealer.service;
+package com.mjc.itealer.service;
 
 import org.springframework.transaction.annotation.Transactional;
+
+import com.mjc.itealer.model.Board;
+import com.mjc.itealer.model.User;
+import com.mjc.itealer.repository.BoardRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import com.cos.itealer.model.Board;
-import com.cos.itealer.model.User;
-import com.cos.itealer.repository.BoardRepository;
 
 @Service
 public class BoardService {

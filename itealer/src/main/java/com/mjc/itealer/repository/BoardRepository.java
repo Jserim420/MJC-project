@@ -1,8 +1,8 @@
-package com.cos.itealer.repository;
+package com.mjc.itealer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cos.itealer.model.Board;
+import com.mjc.itealer.model.Board;
 
 public interface BoardRepository extends JpaRepository <Board, Integer>{
 

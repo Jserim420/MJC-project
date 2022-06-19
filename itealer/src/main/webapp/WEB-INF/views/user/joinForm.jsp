@@ -1,30 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="../layout/signHeader.jsp"%>
 
-<%@ include file="../layout/header.jsp"%>
 
-<div class="container">
-	<form>
+<form action="/auth/joinProc" method="post">
+	<div class="imgcontainer">
+		<a href="/"><img src="/img/iTEALER-001.png" alt="Avatar" class="avatar"></a>
+	</div>
+
+	<div class="container">
+
 		<div class="form-group">
-			<label for="username">Username</label> 
-			<input type="text" class="form-control" placeholder="Enter Username" id="username">
+		<input type="text" class="form-control" placeholder="이름 (실명을 입력해주세요)" id="realname">
 		</div>
 		
 		<div class="form-group">
-			<label for="password">Password</label> 
-			<input type="password" class="form-control" placeholder="Enter password" id="password">
+		 <input type="text" class="form-control" placeholder= "아이디" id="username">
+		</div>
+		
+		<div class="form-group"> 
+		<input type="password" class="form-control" placeholder="비밀번호" id="password">
+		</div>
+		
+		<div class="form-group"> 
+		<input type="text" class="form-control" placeholder="닉네임" id="nickname">
 		</div>
 		
 		<div class="form-group">
-			<label for="email">Email</label> 
-			<input type="email" class="form-control" placeholder="Enter email" id="email">
+		 <input type="text" class="form-control" placeholder="학적정보를 입력해주세요." id="schoolInfo">
 		</div>
+
+		<button id="btn-save" class="btn btn-primary">회원가입</button>
 		
-	</form>
-	<button id="btn-save" class="btn btn-primary">회원가입완료</button>
-
-</div>
-
-<script src="/js/user.js"></script>
-<%@ include file="../layout/footer.jsp"%>
-
-
+	</div>
+	<div class="container" style="background-color: #f1f1f1"></div>
+</form>

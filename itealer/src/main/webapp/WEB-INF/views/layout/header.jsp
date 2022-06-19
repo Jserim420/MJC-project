@@ -2,13 +2,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
-<sec:authorize access="isAuthenticated">
+<sec:authorize access="isAuthenticated()">
 	<sec:authentication property="principal" var="principal" />
 </sec:authorize>
 
 <!DOCTYPE html>
 <html>
 <title>iTEALER</title>
+
 <style>
 html {
 	margin-left: 300px;
@@ -533,7 +534,10 @@ ul, li {
 </script>
 </head>
 <header id="main-header">
-	<a href="main.html"><img src="iTEALER-001.png" width="250" , height="250" display: inline-block> </a>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+	<a href="/"><img src="/img/iTEALER-001.png" width="250" , height="250" display: inline-block> </a>
 	<div class="search-box">
 		<input type="text" class="search-txt" name="" placeholder="검색"> <a class="search-btn" href="#"> <i class="fas fa-search"></i>
 		</a>
@@ -544,22 +548,32 @@ ul, li {
 		<ul class="outer-menu">
 			<li class="outer-menu-item"><span class="menu-title">⬛ 카테고리</span>
 				<ul class="inner-menu">
-					<li class="inner-menu-item"><a href="#"><a href="레시피보기.html">JAVA</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">JavaScript</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">PHP</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피보기.html">C++ / C#</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">Python</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Kotlin</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피보기.html">SQL</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">R</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피리뷰.html">Swift</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="레시피보기.html">VisualBasic</a></li>
-					<li class="inner-menu-item"><a href="#"><a href="베스트레시피.html">기타</a></li>
+					<li class="inner-menu-item"><a href="#">JAVA</a></li>
+					<li class="inner-menu-item"><a href="#">JavaScript</a></li>
+					<li class="inner-menu-item"><a href="#">PHP</a></li>
+					<li class="inner-menu-item"><a href="#">C++ / C#</a></li>
+					<li class="inner-menu-item"><a href="#">Python</a></li>
+					<li class="inner-menu-item"><a href="#">Kotlin</a></li>
+					<li class="inner-menu-item"><a href="#">SQL</a></li>
+					<li class="inner-menu-item"><a href="#">R</a></li>
+					<li class="inner-menu-item"><a href="#">Swift</a></li>
+					<li class="inner-menu-item"><a href="#">VisualBasic</a></li>
+					<li class="inner-menu-item"><a href="#">기타</a></li>
 				</ul></li>
-			<li class="outer-menu-item"><span class="menu-title">공지사항</span></li>
-			<li class="outer-menu-item"><span class="menu-title">학습가이드</span></li>
-			<li class="outer-menu-item"><span class="menu-title">스터디</span></li>
-			<li class="outer-menu-item"><span class="menu-title"><a href="profile 전체.html">마이페이지</a></span></li>
+			<li class="outer-menu-item"><a class="menu-title" href="#">공지사항</a></li>
+			<li class="outer-menu-item"><a class="menu-title" href="#">학습가이드</a></li>
+			<li class="outer-menu-item"><a class="menu-title" href="#">스터디</a></li>
+			<li class="outer-menu-item"><c:choose>
+					<c:when test="${empty principal}">
+						<li class="outer-menu-item"><a class="menu-title" href="/auth/loginForm">로그인</a></li>
+						<li class="outer-menu-item"><a class="menu-title" href="/auth/joinForm">회원가입</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="outer-menu-item"><a class="menu-title" href="/board/saveForm">마이페이지</a></li>
+						<li class="outer-menu-item"><a class="menu-title" href="/logout">로그아웃</a></li>
+					</c:otherwise>
+				</c:choose></li>
 		</ul>
 	</div>
 </nav>
+<br />

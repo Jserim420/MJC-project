@@ -1,4 +1,4 @@
-package com.cos.itealer.config;
+package com.mjc.itealer.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.cos.itealer.config.auth.PrincipalDetailService;
+import com.mjc.itealer.config.auth.PrincipalDetailService;
 
 // 빈 등록: 스프링 컨테이너에서 객체를 관리할 수 있게 하는 것
 
@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http
 		.csrf().disable() // csrf 토큰 비활성화 (테스트시 걸어두는 게 좋음)
 			.authorizeRequests()
-				.antMatchers("/","/auth/**","/js/**","/css/**","/image/**","/dummy/**")
+				.antMatchers("/","/auth/**","/js/**","/css/**","/img/**","/dummy/**")
 				.permitAll()
 				.anyRequest()
 				.authenticated()

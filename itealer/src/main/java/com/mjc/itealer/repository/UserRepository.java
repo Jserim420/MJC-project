@@ -1,10 +1,10 @@
-package com.cos.itealer.repository;
+package com.mjc.itealer.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.cos.itealer.model.User;
+import com.mjc.itealer.model.User;
 
 // Data Access Object
 // 자동 bean 등록

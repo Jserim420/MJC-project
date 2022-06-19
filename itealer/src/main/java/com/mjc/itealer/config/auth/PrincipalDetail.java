@@ -1,4 +1,4 @@
-package com.cos.itealer.config.auth;
+package com.mjc.itealer.config.auth;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.cos.itealer.model.User;
+import com.mjc.itealer.model.User;
 
 import lombok.Getter;
 

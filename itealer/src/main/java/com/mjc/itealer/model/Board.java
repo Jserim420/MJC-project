@@ -1,11 +1,10 @@
-package com.cos.itealer.model;
+package com.mjc.itealer.model;
 
 import java.sql.Timestamp;
 import java.util.List;
 
 import javax.persistence.*;
 
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 
 import lombok.*;

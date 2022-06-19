@@ -1,4 +1,4 @@
-package com.cos.itealer.config.auth;
+package com.mjc.itealer.config.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.cos.itealer.model.User;
-import com.cos.itealer.repository.UserRepository;
+import com.mjc.itealer.model.User;
+import com.mjc.itealer.repository.UserRepository;
 
 @Service // Bean 등록
 public class PrincipalDetailService implements UserDetailsService {
