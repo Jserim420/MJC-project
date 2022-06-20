@@ -9,14 +9,16 @@
 
 	<div class="container">
 		<div class="form-group">
-		 <input type="text" class="form-control" placeholder="아이디" id="username">
+		 <input type="text" name="username" class="form-control" placeholder="아이디" id="username">
 		</div>
 		<div class="form-group"> 
-		<input type="password" class="form-control" placeholder="비밀번호" id="password">
+		<input type="password" name="password" class="form-control" placeholder="비밀번호" id="password">
 		</div>
 		<button id="btn-login" class="btn btn-primary">로그인</button>
 	</div>
 
 	<div class="container" style="background-color: #f1f1f1"></div>
 </form>
+</body>
+</html>
 

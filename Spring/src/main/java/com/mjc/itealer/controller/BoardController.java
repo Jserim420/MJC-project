@@ -44,4 +44,9 @@ public class BoardController {
 		return "board/saveForm";
 	}
 	
+	@GetMapping("/board/pageForm")
+	public String pageForm() {
+		return "board/pageForm";
+	}
+	
 }

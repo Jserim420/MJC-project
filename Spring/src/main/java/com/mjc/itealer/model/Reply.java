@@ -1,12 +1,21 @@
 package com.mjc.itealer.model;
 
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Builder
 @AllArgsConstructor
@@ -14,25 +23,35 @@ import lombok.*;
 @Data
 @Entity
 public class Reply {
-	
-	@Id // primary key
-	@GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment
-	private int id;
-	
+	@Id //Primary key
+	@GeneratedValue(strategy = GenerationType.IDENTITY) // 프로젝트에서 연결된 DB의 넘버링 전략을 따라간다.
+	private int id; // 시퀀스, auto_increment
+
 	@Column(nullable = false, length = 200)
 	private String content;
 	
-	@ManyToOne // Reply : many, board : one -> 하나의 게시글은 여러개의 댓글이 달릴 수 있다.
-	@JoinColumn(name = "boardId")
+	@ManyToOne
+	@JoinColumn(name="boardId")
 	private Board board;
-
-	@ManyToOne // Reply : many, user : one -> 한명의 유저가 여러개의 댓글을 쓸 수 있다.
-	@JoinColumn(name = "userId")
+	
+	@ManyToOne
+	@JoinColumn(name="userId")
 	private User user;
 	
 	@CreationTimestamp
-	private Timestamp createDate;
-	
-	@JoinColumn(name = "goodNumber")
-	private int goodNo;
+	private LocalDateTime createDate;
+
+	@Override
+	public String toString() {
+		return "Reply [id=" + id + ", content=" + content + ", board=" + board + ", user=" + user + ", createDate="
+				+ createDate + "]";
+	}
 }
+
+
+
+
+
+
+
+

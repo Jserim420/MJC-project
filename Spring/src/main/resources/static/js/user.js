@@ -1,44 +1,72 @@
 let index = {
 	init: function() {
-		// 버튼을 눌렀을때, save함수를 호출한다.
-		$("#btn-save").on("click", ()=>{ // function(){} 을 ()=>{}로 변경, this를 바인딩 하기 위해
+		$("#btn-save").on("click", () => { // function(){} , ()=>{} this를 바인딩하기 위해서!! 
 			this.save();
-		}) ;
-		$("#btn-login").on("click", ()=>{ // function(){} 을 ()=>{}로 변경, this를 바인딩 하기 위해
-			this.login();
-		}) ;
-	
+		});
+		$("#btn-update").on("click", () => { // function(){} , ()=>{} this를 바인딩하기 위해서!! 
+			this.update();
+		});
 	},
-	
+
 	save: function() {
+		//alert('user의 save함수 호출됨');
 		let data = {
-			realname: $("#realname").val(),
 			username: $("#username").val(),
 			password: $("#password").val(),
+			realname: $("#realname").val(),
 			nickname: $("#nickname").val(),
 			schoolInfo: $("#schoolInfo").val()
 		};
-		
-		// console.log(data); 해당 데이터 로그를 콘솔에 불러오기
-		
-		// ajax 통신을 이용하여 3개의 데이터를 json으로 변경하여 insert 요청
-		// ajax 호출시 default가 비동기 호출
-		// ajax가 통신을 성공하고 서버가 json을 리턴해주면 자동으로 자바 오브젝트로 변환
-		$.ajax({ // object : 회원가입 수행 요청
-			type: "POST", // 어떤 메소드 방식?
-			url: "/auth/joinProc", // 어느 주소로 호출?
-			data: JSON.stringify(data), // save의 data를 JSON파일로 변환하여 Java에게 전달 - http body 데이터
-			contentType: "application/json; charset=utf-8", // 데이터의 mime 타입
-			dataType: "json" // 요청에 대한 응답이 왔을 때 해당 응답의 타입 - 응답의 결과가 아래의 파라미터로 전달
-		}).done(function(resp){ // 응답이 정상일때
-			alert("회원가입이 완료되었습니다.");
-			// console.log(resp);
-			location.href="/";
-		}).fail(function(error){ // 응답이 실패 할때
+
+		//console.log(data);
+
+		// ajax호출시 default가 비동기 호출
+		// ajax 통신을 이용해서 3개의 데이터를 json으로 변경하여 insert 요청!!
+		// ajax가 통신을 성공하고 서버가 json을 리턴해주면 자동으로 자바 오브젝트로 변환해주네요.
+		$.ajax({
+			type: "POST",
+			url: "/auth/joinProc",
+			data: JSON.stringify(data), // http body데이터
+			contentType: "application/json; charset=utf-8",// body데이터가 어떤 타입인지(MIME)
+			dataType: "json", // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 (생긴게 json이라면) => javascript오브젝트로 변경
+			async: false
+		}).done(function(resp) {
+			if (resp.status === 500) {
+				alert("회원가입에 실패하였습니다.");
+			} else {
+				alert("회원가입이 완료되었습니다.");
+				location.href = "/";
+			}
+		}).fail(function(error) {
 			alert(JSON.stringify(error));
 		});
-		
-	}
+
+	},
+
+	update: function() {
+		//alert('user의 save함수 호출됨');
+		let data = {
+			id: $("#id").val(),
+			username: $("#username").val(),
+			password: $("#password").val(),
+			email: $("#email").val()
+		};
+
+		$.ajax({
+			type: "PUT",
+			url: "/user",
+			data: JSON.stringify(data), // http body데이터
+			contentType: "application/json; charset=utf-8",// body데이터가 어떤 타입인지(MIME)
+			dataType: "json" // 요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열 (생긴게 json이라면) => javascript오브젝트로 변경
+		}).done(function(resp) {
+			alert("회원수정이 완료되었습니다.");
+			//console.log(resp);
+			location.href = "/";
+		}).fail(function(error) {
+			alert(JSON.stringify(error));
+		});
+
+	},
 }
 
 index.init();

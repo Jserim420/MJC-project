@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import lombok.*;
 
@@ -30,15 +31,15 @@ public class User {
 	private String password;
 	
 	@Column(nullable = false, length = 50) 
-	private String nickname;
+	private String nickname; // 닉네임
 	
 	@Column(nullable = false, length = 50) 
-	private String schoolInfo;
+	private String schoolInfo; // 학적정보
 	
-	@Column(nullable = true) 
+	@Column
 	private int wirteCount;
 	
-	@Column(nullable = true) 
+	@Column
 	private int adoptCount;
 	
 	@Enumerated(EnumType.STRING)

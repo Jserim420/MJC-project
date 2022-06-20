@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
@@ -9,6 +9,24 @@
 <!DOCTYPE html>
 <html>
 <title>iTEALER</title>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<%
+    response.addHeader("Access-Control-Allow-Origin", "*");
+    response.addHeader("Access-Control-Allow-Credentials", "true");
+%>
+<script>
+	$(document).ready(function() {
+		$('.outer-menu-item').hover(function() {
+			$(this).find('.inner-menu').show();
+		}, function() {
+			$(this).find('.inner-menu').hide();
+		});
+	});
+</script>
+
 <style>
 html {
 	margin-left: 300px;
@@ -519,19 +537,8 @@ ul, li {
 	margin-left: 100px;
 }
 </style>
-<head>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$('.outer-menu-item').hover(function() {
-			$(this).find('.inner-menu').show();
-		}, function() {
-			$(this).find('.inner-menu').hide();
-		});
-	});
-</script>
 </head>
+
 <header id="main-header">
 	<a href="/"><img src="/img/iTEALER-001.png" width="250" , height="250" display: inline-block> </a>
 	<div class="search-box">
@@ -544,32 +551,36 @@ ul, li {
 		<ul class="outer-menu">
 			<li class="outer-menu-item"><span class="menu-title">⬛ 카테고리</span>
 				<ul class="inner-menu">
-					<li class="inner-menu-item"><a href="#">JAVA</a></li>
-					<li class="inner-menu-item"><a href="#">JavaScript</a></li>
-					<li class="inner-menu-item"><a href="#">PHP</a></li>
-					<li class="inner-menu-item"><a href="#">C++ / C#</a></li>
-					<li class="inner-menu-item"><a href="#">Python</a></li>
-					<li class="inner-menu-item"><a href="#">Kotlin</a></li>
-					<li class="inner-menu-item"><a href="#">SQL</a></li>
-					<li class="inner-menu-item"><a href="#">R</a></li>
-					<li class="inner-menu-item"><a href="#">Swift</a></li>
-					<li class="inner-menu-item"><a href="#">VisualBasic</a></li>
-					<li class="inner-menu-item"><a href="#">기타</a></li>
-				</ul></li>
-			<li class="outer-menu-item"><a class="menu-title" href="#" >공지사항</a></li>
-			<li class="outer-menu-item"><a class="menu-title" href="#">학습가이드</a></li>
-			<li class="outer-menu-item"><a class="menu-title" href="#">스터디</a></li>
-			<li class="outer-menu-item"><c:choose>
-					<c:when test="${empty principal}">
-						<li class="outer-menu-item"><a class="menu-title" href="/auth/loginForm">로그인</a></li>
-						<li class="outer-menu-item"><a class="menu-title" href="/auth/joinForm">회원가입</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="outer-menu-item"><a class="menu-title" href="/board/saveForm">마이페이지</a></li>
-						<li class="outer-menu-item"><a class="menu-title" href="/logout">로그아웃</a></li>
-					</c:otherwise>
-				</c:choose></li>
+				 <li class="inner-menu-item"><a href="/board/pageForm">JAVA</a></li>
+                        <li class="inner-menu-item"><a href="#">JavaScript</a></li>
+                        <li class="inner-menu-item"><a href="#">PHP</a></li>
+                        <li class="inner-menu-item"><a href="#">C++ / C#</a></li>
+                        <li class="inner-menu-item"><a href="#">Python</a></li>
+                        <li class="inner-menu-item"><a href="#">Kotlin</a></li>
+                        <li class="inner-menu-item"><a href="#">SQL</a></li>
+                        <li class="inner-menu-item"><a href="#">R</a></li>
+                        <li class="inner-menu-item"><a href="#">Swift</a></li>
+                        <li class="inner-menu-item"><a href="#">VisualBasic</a></li>
+                        <li class="inner-menu-item"><a href="#">기타</a></li>
+				</ul>
+			</li>
+		
+		<li class="outer-menu-item"><a class="menu-title" href="#">공지사항</a></li>
+		<li class="outer-menu-item"><a class="menu-title" href="#">학습가이드</a></li>
+		<li class="outer-menu-item"><a class="menu-title" href="#">스터디</a></li>
+		<li class="outer-menu-item">
+		<c:choose>
+				<c:when test="${empty principal}">
+					<li class="outer-menu-item"><a class="menu-title" href="/auth/loginForm">로그인</a></li>
+					<li class="outer-menu-item"><a class="menu-title" href="/auth/joinForm">회원가입</a></li>
+				</c:when>
+				<c:otherwise>
+					<li class="outer-menu-item"><a class="menu-title" href="/board/saveForm">마이페이지</a></li>
+					<li class="outer-menu-item"><a class="menu-title" href="/logout">로그아웃</a></li>
+				</c:otherwise>
+			</c:choose></li>
 		</ul>
+		
 	</div>
 </nav>
 <br />
