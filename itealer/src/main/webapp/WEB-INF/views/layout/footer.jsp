@@ -2,7 +2,6 @@
 
 <br />
 
-
 <section></section>
 <footer>
     <div class="f">

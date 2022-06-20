@@ -35,10 +35,10 @@ public class User {
 	@Column(nullable = false, length = 50) 
 	private String schoolInfo;
 	
-	@Column(nullable = true) 
+	@Column
 	private int wirteCount;
 	
-	@Column(nullable = true) 
+	@Column
 	private int adoptCount;
 	
 	@Enumerated(EnumType.STRING)

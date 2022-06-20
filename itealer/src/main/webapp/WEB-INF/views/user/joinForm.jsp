@@ -2,7 +2,7 @@
 <%@include file="../layout/signHeader.jsp"%>
 
 
-<form action="/auth/joinProc" method="post">
+<form>
 	<div class="imgcontainer">
 		<a href="/"><img src="/img/iTEALER-001.png" alt="Avatar" class="avatar"></a>
 	</div>
@@ -29,8 +29,10 @@
 		 <input type="text" class="form-control" placeholder="학적정보를 입력해주세요." id="schoolInfo">
 		</div>
 
-		<button id="btn-save" class="btn btn-primary">회원가입</button>
+		
 		
 	</div>
 	<div class="container" style="background-color: #f1f1f1"></div>
 </form>
+<button id="btn-save" class="btn btn-primary">회원가입</button>
+<script src="/js/user.js"></script>

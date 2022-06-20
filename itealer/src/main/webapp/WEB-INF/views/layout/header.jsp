@@ -3,7 +3,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal" var="principal" />
+	<sec:authentication property="principal" var="principal"/>
 </sec:authorize>
 
 <!DOCTYPE html>
@@ -532,11 +532,12 @@ ul, li {
 		});
 	});
 </script>
-</head>
-<header id="main-header">
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<header id="main-header">
+
 	<a href="/"><img src="/img/iTEALER-001.png" width="250" , height="250" display: inline-block> </a>
 	<div class="search-box">
 		<input type="text" class="search-txt" name="" placeholder="검색"> <a class="search-btn" href="#"> <i class="fas fa-search"></i>
