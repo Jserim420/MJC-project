@@ -35,6 +35,18 @@ html {
 	align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited { 
+color:black; 
+}
+
+a:link { 
+color:black; 
+}
+
 #main-navigation {
 	border-top: 1px solid #C8C8C8;
 	border-bottom: 1px solid #C8C8C8;
@@ -367,6 +379,7 @@ section {
 
 section {
 	padding-bottom: 500px;
+	height ; 500px
 }
 
 footer {
@@ -550,15 +563,15 @@ ul, li {
 	<div class="pull-left">
 		<ul class="outer-menu">
 			<li class="outer-menu-item"><span class="menu-title">⬛ iTEALER</span>
-            <ul class="inner-menu">
-             <li class="inner-menu-item"><a href="/board/pageForm">글목록</a></li>
+				<ul class="inner-menu">
+				 <li class="inner-menu-item"><a href="/board/pageForm">글목록</a></li>
                         <li class="inner-menu-item"><a href="/board/saveForm">글쓰기</a></li>
-                        <li class="inner-menu-item"><a href="#">학습가이드</a></li>
+                        <li class="inner-menu-item"><a href="https://1drv.ms/p/s!AvhIrlCWvnX1h0tOcSBOc60sc71N?e=8sPZpZ">학습가이드</a></li>
                         <li class="inner-menu-item"><a href="#">Q&A</a></li>
-            </ul>
-         </li>
+				</ul>
+			</li>
 		
-		<li class="outer-menu-item"><a class="menu-title" href="#">공지사항</a></li>
+		<li class="outer-menu-item"><a class="menu-title" href="/">공지사항</a></li>
 		<li class="outer-menu-item"><a class="menu-title" href="/board/study">스터디</a></li>
 		<li class="outer-menu-item">
 		<c:choose>

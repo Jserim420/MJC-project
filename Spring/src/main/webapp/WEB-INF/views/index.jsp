@@ -8,7 +8,7 @@
 
 			<ul class="slidelist">
 				<!-- 슬라이드 영역 -->
-				<li class="slideitem"><a> <img src="/img/mainBar/b.01.png">
+				<li class="slideitem"><a href = "https://1drv.ms/p/s!AvhIrlCWvnX1h0tOcSBOc60sc71N?e=8sPZpZ"> <img src="/img/mainBar/b.01.png">
 				</a></li>
 				<li class="slideitem"><a> <img src="/img/mainBar/b.02.png">
 				</a></li>
@@ -37,35 +37,34 @@
 			</ul>
 		</div>
 	</div>
-	
+
 	<div class="news">
 		<h2>📌 IT NEWS</h2>
 		<a href="https://www.donga.com/news/Society/article/all/20200324/100316531/1"><img id="n" src="/img/mainNews/n.01.png"></a> <a
 			href="https://magazine.hankyung.com/job-joy/article/202104306364d"><img id="n" src="/img/mainNews/n.02.png"></a> <a href="https://www.yna.co.kr/view/AKR20200615105800051"><img id="n"
 			src="/img/mainNews/n.03.png"></a>
 	</div>
-	
+
 	<div class="aside">
 		<div class="left1">
-			<h2>📌  iTEALER</h2>
+			<h2>📌 BEST iTEALER</h2>
 			<div class="user">
-				<c:forEach var="user" items="${users.id}">
-					<h4 class="card-title">${user.nickname}</h4>
-				</c:forEach>
+				<img id="user" src="/img/mainUsers/user1.png" style="display: block;"><br />보리밥<br />채택률 98%
 			</div>
 			<div class="user">
-				<img id="user" src="user2.png" style="display: block;"><br />눈물<br />채택률 86%
+				<img id="user" src="/img/mainUsers/user2.png" style="display: block;"><br />눈물<br />채택률 86%
 			</div>
 			<div class="user">
-				<img id="user" src="user3.png" style="display: block;"> <br />말하는 감자<br />채택률 83%
+				<img id="user" src="/img/mainUsers/user3.png" style="display: block;"> <br />말하는 감자<br />채택률 83%
 			</div>
 		</div>
 		<div class="left1">
 			<h2>📌 최근 Q&A</h2>
 			<div class="box1">
 				<c:forEach var="board" items="${boards.content}">
-					<h4 class="card-title">${board.title}</h4> 
-					<a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
+					<h4 class="card-title">
+						<a href="/board/${board.id}">${board.title}</a>
+					</h4>
 				</c:forEach>
 			</div>
 		</div>

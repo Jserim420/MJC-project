@@ -18,11 +18,20 @@ public class BoardController {
 
 	@GetMapping({ "", "/" })
 	public String index(Model model,
-			@PageableDefault(size = 3, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+			@PageableDefault(size = 4, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 		model.addAttribute("boards", boardService.글목록(pageable));
 
 		// /WEB-INF/views/index.jsp
 		return "index"; // viewResolver 작동!
+	}
+
+	@GetMapping({ "/board/pageForm" })
+	public String pageForm(Model model,
+			@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+		model.addAttribute("boards", boardService.글목록(pageable));
+
+		// /WEB-INF/views/index.jsp
+		return "board/pageForm"; // viewResolver 작동!
 	}
 
 	@GetMapping("/board/{id}")
@@ -43,15 +52,6 @@ public class BoardController {
 		return "board/saveForm";
 	}
 
-	@GetMapping({ "/board/pageForm" })
-	public String pageForm(Model model,
-			@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
-		model.addAttribute("boards", boardService.글목록(pageable));
-
-		// /WEB-INF/views/index.jsp
-		return "board/pageForm"; // viewResolver 작동!
-	}
-
 	@GetMapping("/board/profile")
 	public String profile() {
 		return "/board/profile";
@@ -61,4 +61,5 @@ public class BoardController {
 	public String study() {
 		return "/board/study";
 	}
+
 }

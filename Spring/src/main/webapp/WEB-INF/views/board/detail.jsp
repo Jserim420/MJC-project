@@ -1,213 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="../layout/header.jsp"%>
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Q&A View</title>
-<head>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-<link rel="stylesheet" href="h_maincss.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
-	$(document).ready(function() {
-		$('.outer-menu-item').hover(function() {
-			$(this).find('.inner-menu').show();
-		}, function() {
-			$(this).find('.inner-menu').hide();
-		});
-	});
+   $(document).ready(function() {
+      $('.outer-menu-item').hover(function() {
+         $(this).find('.inner-menu').show();
+      }, function() {
+         $(this).find('.inner-menu').hide();
+      });
+   });
 </script>
-</head>
 
 <style>
-{
-margin-left
-
-
-
-
-:
-
-
- 
-
-
-300px
-
-
-
-
-;
-margin-right
-
-
-
-
-:
-
-
- 
-
-
-300px
-
-
-
-
-;
-width
-
-
-
-
-:
-
-
- 
-
-
-1250px
-
-
-
-
-;
-align-items
-
-
-
-
-:
-
-
- 
-
-
-center
-
-
-
-             
-
-
+html {
+	margin-left: 300px;
+	margin-right: 300px;
+	width: 1250px;
+	align-items: center
 }
-#main-navigation {
-	border-top: 1px solid #C8C8C8;
-	border-bottom: 1px solid #C8C8C8;
-	margin-bottom: 20px;
-	height: 70px;
-	list-style: none;
-}
-
-.outer-menu-item {
-	float: left;
-	position: relative;
-	list-style: none;
-}
-
-.outer-menu-item:hover {
-	background: rgb(255, 255, 255);
-	color: rgb(185, 157, 206);
-	list-style: none;
-}
-
-.menu-title {
-	display: block;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	padding: 5px 20px;
-}
-
-.inner-menu {
-	display: none;
-	position: absolute;
-	top: 40px;
-	left: 0;
-	width: 100%;
-	background: white;
-	box-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
-	z-index: 1000;
-	text-align: center
-}
-
-.inner-menu-item>a {
-	display: block;
-	padding: 5px 10px;
-	color: black
-}
-
-.inner-menu-item>a:hover {
-	background: rgb(185, 157, 206);
-	color: white;
-}
-
-.search-box {
-	padding: 10px;
-	height: 30px;
-	margin-top: 100px;
-	background-color: #fff;
-	border: 1px solid rgb(185, 157, 206);
-	border-radius: 30px;
-	transition: 0.4s;
-	width: 500px;
-	float: right;
-	position: relative;
-}
-
-.search-btn {
-	text-decoration: none;
-	float: right;
-	width: 30px;
-	height: 30px;
-	background-color: #fff;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: rgb(185, 157, 206);
-	position: absolute;
-	right: 11px;
-	top: 11px;
-}
-
-.search-box:hover>.search-btn {
-	background-color: #fff;
-}
-
-.search-txt {
-	padding: 0;
-	width: 0px;
-	border: none !important;
-	background: none;
-	outline: none;
-	float: left;
-	font-size: 1rem;
-	line-height: 30px;
-	margin: 0 !important;
-	height: 38px;
-	background-color: white !important;
-}
-
-.search-txt {
-	width: 240px;
-	padding: 0 6px;
-}
-
-.category {
-	background-color: rgb(221, 211, 229);
-	text-align: center;
-	padding-top: 1px;
-	padding-bottom: 1px;
-	font-size: 16px;
-	border-radius: 10px;
-}
-
-.bold {
-	font-weight: 900;
-}
-
 .question_box {
 	margin-top: 40px;
 	margin-bottom: 100px;
@@ -229,7 +41,7 @@ center
 	margin-left: 20px;
 	background-color: rgba(237, 237, 239);
 	padding-left: 12px;
-	padding-right: 400px;
+	padding-right: 800px;
 	padding-top: 7px;
 	padding-bottom: 7px;
 	border-radius: 40px;
@@ -255,6 +67,7 @@ center
 	border: 1px solid rgb(221, 220, 220);
 	box-shadow: 4px 4px rgb(237, 237, 239);
 	border-radius: 10px;
+	width: 1200px;
 }
 
 .answer_icon {
@@ -263,10 +76,17 @@ center
 
 .icon_box {
 	text-align: center;
+	border-radius: 10px;
+	border: 3px solid rgb(221, 220, 220);
+	margin-bottom: 10px;
+	width: 70px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .answer_description {
-	padding-left: 30px;
+	padding-top: 12px;
+	padding-left: 20px;
 }
 
 .answer_info {
@@ -298,6 +118,7 @@ center
 }
 
 .sub_answer {
+	border: 0px solid black;
 	padding-left: 10px;
 	padding-top: 6px;
 	padding-bottom: 6px;
@@ -320,6 +141,7 @@ center
 }
 
 .submit_btn {
+	border: 0px solid black;
 	width: 70px;
 	background-color: rgba(185, 157, 206, 0.6);
 	text-align: center;
@@ -341,13 +163,27 @@ center
 }
 
 .btns {
+	border: 0px solid black;
 	display: flex;
 	margin-top: 70px;
 	justify-content: flex-end;
 	margin-bottom: 70px;
 }
 
+#btn-reply-save {
+	border: 0px solid black;
+	background-color: rgba(185, 157, 206, 0.6);
+	margin-right: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	margin-left: 70px;
+}
+
 .sub_btn {
+	border: 0px solid black;
 	background-color: rgba(185, 157, 206, 0.6);
 	margin-right: 10px;
 	padding-top: 6px;
@@ -357,83 +193,104 @@ center
 	border-radius: 10px;
 }
 
+.sub_btn1 {
+	text-align: center;
+	border-radius: 10px;
+	border: 3px solid rgb(221, 220, 220);
+	margin-bottom: 5px;
+	width: 70px;
+	border: 0px solid black;
+	background-color: rgba(185, 157, 206, 0.6);
+	padding-top: 6px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.sub_btn2 {
+	border: 0px solid black;
+	background-color: rgba(185, 157, 206, 0.6);
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-top: -30px;
+}
+
 section {
 	padding-bottom: 200px;
 }
+
+.question1 {
+	margin-top: 50px;
+}
+
+.span_name {
+ padding-left: 840px;
+}
+
 </style>
+</head>
 
-<div class="category">
-	<p>
-		JAVAㅤ|ㅤJavaScriptㅤ|ㅤPHPㅤ|ㅤC++ / C#ㅤ|ㅤ<span class="bold">Python</span>ㅤ|ㅤKotlinㅤ|ㅤSQLㅤ|ㅤRㅤ|ㅤSwiftㅤ|ㅤVisualBasicㅤ|ㅤ기타
-	</p>
-</div>
-<p>
-	작성자 : <span> <i>${board.user.username} </i></span>
-</p>
+<body>
 
 
-<div class="question_box">
-	<p>
-		제목 <span class="question"> ${board.title}</span>
-	</p>
-</div>
-
-<div class="btns">
-	<button class="sub_btn" onclick="history.back()">돌아가기</button>
-	<c:if test="${board.user.id == principal.user.id}">
-		<a href="/board/${board.id}/updateForm" class="btn btn-warning">수정</a>
-		<button id="btn-delete" class="btn btn-danger">삭제</button>
-	</c:if>
-</div>
-
-<div class="entire_answer">
-	<div class="answer">
-		<ul id="reply-box" class="list-group">
-			<c:forEach var="reply" items="${board.replys }">
-				<li id="reply-${reply.id}" class="list-group-item d-flex justify-content-between">
-					<div>${reply.content}</div>
-					<div class="d-flex">
-						<div class="font-italic">작성자 : ${reply.user.username} &nbsp;</div>
-						<c:if test="${reply.user.id eq principal.user.id}">
-							<button onClick="index.replyDelete(${board.id}, ${reply.id})" class="badge">삭제</button>
-						</c:if>
-
-					</div>
-				</li>
-			</c:forEach>
-		</ul>
-	</div>
-</div>
-
-<div class="icon_box">
-	<img src="icon.png" class="answer_icon">
-	<p>그그</p>
-</div>
-<div class="answer_description">
-	<p>오잉,,,,?</p>
-	<p class="answer_info">2022.05.05 16:31ㅤㅤ답글쓰기</p>
-</div>
-<div class="rating" style="padding-left: 775px;">
-	△<br /> -21<br /> ▽
-</div>
-</div>
-<div class="select_box">채택하기</div>
-</div>
-
-<div class="sub_answer">
-	<div class="flex">
-		<img src="icon.png" class="answer_icon">
-		<textarea class="form-control" rows="1">댓글을 작성하여 문제해결에 도움을 주세요.</textarea>
+	<div class="question_box">
+		<p>
+			제목 <span class="question"> ${board.title}</span>
+		</p>
+		<p>
+			<span class="span_name">작성자 : <i>${board.user.username} </i></span>
+		</p>
+		<div>
+			<div class="question1">${board.content}</div>
+		</div>
 	</div>
 
-	<div class="submit_btn">
-		<button class="btn btn-primary">작성
+
+	<div class="btns">
+		<button class="sub_btn" onclick="history.back()">돌아가기</button>
+		<c:if test="${board.user.id == principal.user.id}">
+			<a href="/board/${board.id}/updateForm"><button class="sub_btn">수정</button></a>
+			<button id="btn-delete" class="sub_btn">삭제</button>
+		</c:if>
 	</div>
-	</button>
-</div>
 
-</body>
+	<c:forEach var="reply" items="${board.replys}">
+		<div class="entire_answer">
+			<div class="answer">
+				<div class="icon_box">${reply.user.username}</div>
+
+				<div id="reply-${reply.id}" class="answer_description">
+					${reply.content}
+				</div>
+				
+				</div>
+				<c:if test="${reply.user.id eq principal.user.id}">
+					<button onClick="index.replyDelete(${board.id}, ${reply.id})" class="sub_btn1">삭제</button>
+				</c:if>
+
+			</div>
+
+	</c:forEach>
+
+	<br />
+
+	<div class="sub_answer" id="no">
+		<form>
+			<input type="hidden" id="userId" value="${principal.user.id}" /> <input type="hidden" id="boardId" value="${board.id}" />
+			<div class="flex">
+				<textarea style= "border: none;" id="reply-content" rows="1" cols="150"></textarea>
+				<button type="button" id="btn-reply-save" class="submit_btn2">등록</button>
+			</div>
+		</form>
+	</div>
 
 
-<script src="/js/board.js"></script>
-<%@include file="../layout/footer.jsp"%>
+	<script src="/js/board.js"></script>
+	<%@include file="../layout/footer.jsp"%>
