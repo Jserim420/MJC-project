@@ -559,8 +559,7 @@ ul, li {
          </li>
 		
 		<li class="outer-menu-item"><a class="menu-title" href="#">공지사항</a></li>
-		<li class="outer-menu-item"><a class="menu-title" href="#">학습가이드</a></li>
-		<li class="outer-menu-item"><a class="menu-title" href="#">스터디</a></li>
+		<li class="outer-menu-item"><a class="menu-title" href="/board/study">스터디</a></li>
 		<li class="outer-menu-item">
 		<c:choose>
 				<c:when test="${empty principal}">

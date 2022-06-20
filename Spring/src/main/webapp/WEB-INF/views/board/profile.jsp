@@ -229,11 +229,11 @@
    </div>
 
    <div class="container"></div>
-<input type="text" placeholder="이름" name="uname" required>
+<input type="text" placeholder="이름 (실명을 입력해주세요)" name="uname" required>
 <input type="text" placeholder="아이디" name="uname" required>
 <input type="password" placeholder="비밀번호" name="psw" required>
-<input type="int" placeholder="전화번호" name="uname" required>
-<input type="text" placeholder="재학정보" name="uname" required>
+<input type="text" placeholder="닉네임" name="nickname" required>
+<input type="text" placeholder="학적정보를 입력해주세요." name="uname" required>
 <div class="submit">
     <a href="#">수정하기</a>
     </div>

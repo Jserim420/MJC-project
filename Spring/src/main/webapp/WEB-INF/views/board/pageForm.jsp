@@ -6,8 +6,7 @@
 <title>iTEALER</title>
 <head>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-<link rel="stylesheet" href="maincss.css">
-<link rel="stylesheet" href="Listcss.css">
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
 	$(document).ready(function() {
@@ -181,3 +180,4 @@ button {
 	</div>
 </body>
 </html>
+<%@include file="../layout/footer.jsp"%>
