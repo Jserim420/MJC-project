@@ -549,21 +549,14 @@ ul, li {
 <nav id="main-navigation">
 	<div class="pull-left">
 		<ul class="outer-menu">
-			<li class="outer-menu-item"><span class="menu-title">⬛ 카테고리</span>
-				<ul class="inner-menu">
-				 <li class="inner-menu-item"><a href="/board/pageForm">JAVA</a></li>
-                        <li class="inner-menu-item"><a href="#">JavaScript</a></li>
-                        <li class="inner-menu-item"><a href="#">PHP</a></li>
-                        <li class="inner-menu-item"><a href="#">C++ / C#</a></li>
-                        <li class="inner-menu-item"><a href="#">Python</a></li>
-                        <li class="inner-menu-item"><a href="#">Kotlin</a></li>
-                        <li class="inner-menu-item"><a href="#">SQL</a></li>
-                        <li class="inner-menu-item"><a href="#">R</a></li>
-                        <li class="inner-menu-item"><a href="#">Swift</a></li>
-                        <li class="inner-menu-item"><a href="#">VisualBasic</a></li>
-                        <li class="inner-menu-item"><a href="#">기타</a></li>
-				</ul>
-			</li>
+			<li class="outer-menu-item"><span class="menu-title">⬛ iTEALER</span>
+            <ul class="inner-menu">
+             <li class="inner-menu-item"><a href="/board/pageForm">글목록</a></li>
+                        <li class="inner-menu-item"><a href="/board/saveForm">글쓰기</a></li>
+                        <li class="inner-menu-item"><a href="#">학습가이드</a></li>
+                        <li class="inner-menu-item"><a href="#">Q&A</a></li>
+            </ul>
+         </li>
 		
 		<li class="outer-menu-item"><a class="menu-title" href="#">공지사항</a></li>
 		<li class="outer-menu-item"><a class="menu-title" href="#">학습가이드</a></li>
@@ -575,7 +568,7 @@ ul, li {
 					<li class="outer-menu-item"><a class="menu-title" href="/auth/joinForm">회원가입</a></li>
 				</c:when>
 				<c:otherwise>
-					<li class="outer-menu-item"><a class="menu-title" href="/board/saveForm">마이페이지</a></li>
+					<li class="outer-menu-item"><a class="menu-title" href="/board/profile">마이페이지</a></li>
 					<li class="outer-menu-item"><a class="menu-title" href="/logout">로그아웃</a></li>
 				</c:otherwise>
 			</c:choose></li>

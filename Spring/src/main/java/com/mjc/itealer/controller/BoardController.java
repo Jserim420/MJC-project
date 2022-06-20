@@ -49,4 +49,9 @@ public class BoardController {
 		return "board/pageForm";
 	}
 	
+	@GetMapping("/board/profile")
+	public String profile() {
+		return "/board/profile";
+	}
+	
 }
