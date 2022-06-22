@@ -28,7 +28,8 @@
 		</div>
 		
 	</div>
-	<div class="container" style="background-color: #f1f1f1"></div>
 </form>
+
 <button id="btn-save" class="btn btn-primary">회원가입</button>
+
 <script src="/js/user.js"></script>

@@ -20,6 +20,7 @@ html {
 	width: 1250px;
 	align-items: center
 }
+
 .question_box {
 	margin-top: 40px;
 	margin-bottom: 100px;
@@ -40,7 +41,6 @@ html {
 	border: 0px solid black;
 	margin-left: 20px;
 	background-color: rgba(237, 237, 239);
-	padding-left: 12px;
 	padding-right: 800px;
 	padding-top: 7px;
 	padding-bottom: 7px;
@@ -241,9 +241,12 @@ section {
 
 
 	<div class="question_box">
+	<input type="hidden" id="id" value="${board.id}" />
 		<p>
-			제목 <span class="question"> ${board.title}</span>
+			제목 <span class="question"> ${board.title} </span>
 		</p>
+		
+		
 		<p>
 			<span class="span_name">작성자 : <i>${board.user.username} </i></span>
 		</p>

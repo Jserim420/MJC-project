@@ -22,7 +22,7 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: update  # 프로젝트 실행할 때 마다 테이블 새로 생성 - 최초 에는 create, 다음에는 update로
+      ddl-auto: update # 프로젝트 실행할 때 마다 테이블 새로 생성 - 최초 에는 create, 다음에는 update로
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         # 테이블 생성 시 변수명 그대로 데이터베이스 필드에 넣어준다.

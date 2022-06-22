@@ -27,7 +27,7 @@ public class BoardController {
 
 	@GetMapping({ "/board/pageForm" })
 	public String pageForm(Model model,
-			@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+			@PageableDefault(size = 2, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
 		model.addAttribute("boards", boardService.글목록(pageable));
 
 		// /WEB-INF/views/index.jsp

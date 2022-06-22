@@ -81,7 +81,7 @@ div {
 	justify-content: left;
 }
 
-input[type=text], input[type=password], input[type=int] {
+#text1 {
 	width: 100%;
 	border-radius: 20px;
 	padding: 12px 20px;
@@ -129,8 +129,11 @@ button {
 		</div>
 
 		<div class="container"></div>
-		<input type="text" placeholder="이름 (실명을 입력해주세요)" name="uname" required> <input type="text" placeholder="아이디" name="uname" required> <input type="password" placeholder="비밀번호"
-			name="psw" required> <input type="text" placeholder="닉네임" name="nickname" required> <input type="text" placeholder="학적정보를 입력해주세요." name="uname" required>
+		<input type="text" id="text1" placeholder="이름 (실명을 입력해주세요)" name="uname" required>
+		 <input type="text" id="text1" placeholder="아이디" name="uname" required>
+		  <input type="password" id="text1" placeholder="비밀번호"name="psw" required> 
+		 <input type="text" id="text1" placeholder="닉네임" name="nickname" required>
+		  <input type="text" id="text1" placeholder="학적정보를 입력해주세요." name="uname" required>
 		<div class="submit">
 			<a href="#">수정하기</a>
 		</div>

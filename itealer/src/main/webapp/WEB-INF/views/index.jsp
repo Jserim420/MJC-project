@@ -3,7 +3,9 @@
 
 <body>
 	<div class="section">
-		<input type="radio" name="slide" id="slide01" checked> <input type="radio" name="slide" id="slide02"> <input type="radio" name="slide" id="slide03">
+		<input type="radio" name="slide" id="slide01" checked>
+		 <input type="radio" name="slide" id="slide02"> 
+		 <input type="radio" name="slide" id="slide03">
 		<div class="slidewrap">
 
 			<ul class="slidelist">

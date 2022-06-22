@@ -29,7 +29,6 @@ form {
 	border: 3px solid #f1f1f1;
 	margin-left: 350px;
 	margin-right: 350px;
-	margin-bottom: 300px;
 }
 
 input[type=text], input[type=password], input[type=int] {
@@ -91,6 +90,18 @@ span.psw {
 	font-size: small;
 	text-align: center;
 }
+
+#btn-save {
+background-color: #ffec1f67;
+	color: rgb(0, 0, 0);
+	padding: 14px 20px;
+	margin-left: 345px;
+	border: none;
+	cursor: pointer;
+	width: 540px;
+	border-radius: 20px;
+}
+
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -13,10 +13,8 @@
 <head>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<%
-    response.addHeader("Access-Control-Allow-Origin", "*");
-    response.addHeader("Access-Control-Allow-Credentials", "true");
-%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
 <script>
 	$(document).ready(function() {
 		$('.outer-menu-item').hover(function() {
@@ -46,6 +44,7 @@ color:black;
 a:link { 
 color:black; 
 }
+
 
 #main-navigation {
 	border-top: 1px solid #C8C8C8;
@@ -549,6 +548,7 @@ ul, li {
 	margin-top: 30px;
 	margin-left: 100px;
 }
+
 </style>
 </head>
 
